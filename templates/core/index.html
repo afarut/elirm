@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+  <title></title>
+</head>
+<body style="background-color: black;">
+<!--<img src="/home/pendoc/Изображения/23876.jpeg" style="position: absolute; width: 100%; height: 100vh; filter: brightness(0.4); z-index: -100;">
+-->
+<img src="{% static 'assets/img/23876.jpeg' %}" style="width: 100%; height: 100vh; position: absolute; top: 0; left: 0; filter: brightness(0.4);">
+<div>
+  <div style="height: 200px; width: 300px; margin: calc(50vh - 100px) calc(50% - 150px); background: black; position: relative; opacity: 0.6">
+    <p style="font-size: 70px; text-align: center;font-family: 'Open Sans', sans-serif;">Ренат</p>
+    <p style="text-align: center;">
+      <a href="https://github.com/PEN-doc" style="display: inline-block;">
+        <img src="{% static 'assets/img/git.png' %}" style="height: 60px; filter: invert(100%);">
+      </a>
+      <a href="https://t.me/Renat_kharisov" style="display: inline-block; margin-left: 5px;">
+        <img src="{% static 'assets/img/premium-icon-telegram-4701496.png' %}" style="height: 60px; filter: invert(120%);">
+      </a>
+      <a href="mailto:afarut5@ya.ru" style="display: inline-block;">
+        <img src="{% static 'assets/img/2.png' %}" style="height: 60px; filter: invert(120%);">
+      </a>
+    </p>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html> 
