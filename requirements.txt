@@ -3,6 +3,8 @@ backports.zoneinfo==0.2.1
 certifi==2022.6.15
 charset-normalizer==2.1.0
 Django==4.0.6
+django-hosts==5.1
+django-subdomains==2.1.0
 idna==3.3
 python-dotenv==0.20.0
 requests==2.28.1

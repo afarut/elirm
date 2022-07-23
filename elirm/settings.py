@@ -30,9 +30,9 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 DEBUG = strtobool(os.environ["DJANGO_DEBUG"])
 
 if DEBUG: # set false, when you get domen
-    ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = ["localhost", "api.localhost"]
 else:
-    ALLOWED_HOSTS = ["elirm.ru", "www.elirm.ru", "localhost"]
+    ALLOWED_HOSTS = ["elirm.ru", "www.elirm.ru", "api.elirm.ru", "localhost"]
 
 
 # Application definition
@@ -44,11 +44,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "django_hosts",
     'core',
     'vkapp',
+    'api',
 ]
 
 MIDDLEWARE = [
+    'django_hosts.middleware.HostsRequestMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -56,9 +59,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django_hosts.middleware.HostsResponseMiddleware",
 ]
 
 ROOT_URLCONF = 'elirm.urls'
+ROOT_HOSTCONF = 'elirm.hosts'
+DEFAULT_HOST = "www"
 
 TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 TEMPLATES = [
