@@ -166,7 +166,7 @@ LOGGING = {
     },
 }
 
-
+# Мои настройки
 TELEGRAM = {
     "API_KEY": os.environ["TELEGRAM_API_KEY"],
     "admins": [os.environ["TELEGRAM_ADMIN1"]]
@@ -175,3 +175,5 @@ TELEGRAM = {
 VK = {
     "API_KEY": os.environ["VK_API_KEY"],
 }
+
+TESSERACT_LANGS = ["rus", "eng"]
