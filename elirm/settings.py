@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'core',
     'vkapp',
     'api',
+    'tools',
 ]
 
 MIDDLEWARE = [
