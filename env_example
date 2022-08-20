@@ -3,5 +3,3 @@ SECRET_KEY=django_key
 TELEGRAM_API_KEY=bot_api_key
 TELEGRAM_ADMIN1=tg_id
 VK_API_KEY=api_key
-TEST=TEKST
-test2=TEKST

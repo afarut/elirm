@@ -53,3 +53,13 @@ def image_convertor(request):
             text = pytesseract.image_to_string(image, lang = "rus")
             return HttpResponse(text)
     return render(request, "tools/image_convertor.html", {"form": ImageForm()})
+
+
+def chat(request):
+    return render(request, "tools/chat.html")
+
+
+def chat_room(request, room_name):
+    return render(request, 'tools/chat_room.html', {
+        'room_name': room_name
+    })
