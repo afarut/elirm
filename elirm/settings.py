@@ -30,9 +30,9 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 DEBUG = strtobool(os.environ["DJANGO_DEBUG"])
 
 if DEBUG: # set false, when you get domen
-    ALLOWED_HOSTS = ["localhost", "api.localhost"]
+    ALLOWED_HOSTS = ["localhost", "api.localhost", "lab.localhost"]
 else:
-    ALLOWED_HOSTS = ["elirm.ru", "www.elirm.ru", "api.elirm.ru", "localhost"]
+    ALLOWED_HOSTS = ["elirm.ru", "www.elirm.ru", "api.elirm.ru", "localhost", "lab.elirm.ru"]
 
 
 # Application definition
@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'vkapp',
     'api',
     'tools',
+    'lab',
 ]
 
 MIDDLEWARE = [

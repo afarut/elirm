@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Лабораторные работы</title>
+</head>
+<body>
+{% for lab in labs %}
+<p><a href="{{lab.upload.url}}" download="">{{lab.title}}</a></p>
+{% endfor %}
+</body>
+</html>
